@@ -9,7 +9,7 @@ Inspired by [Tekigg](https://github.com/tekigg/niconico-twitch) and [ThatKoffe](
 - Connects directly to Twitch IRC
 - Nico-style scrolling messages
 - OBS/browser source friendly
-- Refresh token support for long sessions
+- Refresh token support
 - No server or backend required
 
 ## 🚀 How to Use
@@ -58,7 +58,7 @@ window.TWITCH_CONFIG = {
   channel: "your_channel_name",
   username: "your_twitch_username",
   fontSize: "30px", // Edit to a value that works for you. For 1080p, 30px or higher is best!
-  hideUsername: false // set to true if you want to hide usernames, true NicoNico Douga style!
+  hideUsername: true // set to false if you want to show usernames
 };
 ```
 
