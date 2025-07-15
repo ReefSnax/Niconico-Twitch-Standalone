@@ -1,5 +1,34 @@
 
 (function () {
+
+function truncateHTML(htmlString, maxChars) {
+  const container = document.createElement("div");
+  container.innerHTML = htmlString;
+
+  let count = 0;
+  const result = document.createElement("div");
+
+  function walk(node, outputParent) {
+    for (let child of node.childNodes) {
+      if (count >= maxChars) break;
+
+      if (child.nodeType === Node.TEXT_NODE) {
+        const remaining = maxChars - count;
+        const text = child.textContent.substring(0, remaining);
+        count += text.length;
+        outputParent.appendChild(document.createTextNode(text));
+      } else if (child.nodeType === Node.ELEMENT_NODE) {
+        const clone = child.cloneNode(false);
+        outputParent.appendChild(clone);
+        walk(child, clone);
+      }
+    }
+  }
+
+  walk(container, result);
+  return result.innerHTML + (count >= maxChars ? "…" : "");
+}
+
   const config = window.TWITCH_CONFIG;
 
   async function getAccessToken(config) {
@@ -166,9 +195,12 @@ function displayMessage(fullHTML) {
 
       const match = raw.match(/:(\w+)![^ ]+ PRIVMSG #[^ ]+ :(.+)/);
       if (match) {
-        const [_, user, msg] = match;
-        let html = parseTwitchEmotes(msg, meta["emotes"]);
+        let [_, user, msg] = match;
+                        let html = parseTwitchEmotes(msg, meta["emotes"]);
         html = parseThirdPartyEmotes(html, emoteMap);
+      if (config.maxChars) {
+        html = truncateHTML(html, config.maxChars);
+      }
 
         const usernameHTML = config.hideUsername ? "" : `<span class="username" style="color:${meta["color"] || '#fff'}">${user}:</span> `;
         displayMessage(usernameHTML + html);
