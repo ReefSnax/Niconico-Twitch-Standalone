@@ -21,7 +21,7 @@ Inspired by [Tekigg](https://github.com/tekigg/niconico-twitch) and [ThatKoffe](
 2. Open `config.js` and fill in your Twitch info.
 3. Load `index.html` locally (as a `file:///` path) in OBS.
 
-### 🔐 Getting a `chat:read` Refresh Token (Recommended)
+#### 🔐 Getting a `chat:read` Refresh Token
 
 You can use [TwitchTokenGenerator.com](https://twitchtokengenerator.com) to get a `chat:read` refresh token using **your own Twitch Developer credentials**:
 
