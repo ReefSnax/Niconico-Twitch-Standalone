@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+#chat-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.message {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  animation: scroll-left 10s linear forwards;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(100vw); }
+  to { transform: translateX(-100%); }
+}
