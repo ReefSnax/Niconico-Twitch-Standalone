@@ -1,6 +1,8 @@
 # NicoNico Twitch Chat Overlay (Standalone)
 
-A Twitch chat overlay styled like NicoNico Douga — no StreamElements or StreamLabs required!
+A Twitch chat overlay styled like [NicoNico Douga](https://www.nicovideo.jp/) — no StreamElements or StreamLabs required!
+
+Inspired by [Tekigg](https://github.com/tekigg/niconico-twitch) and [ThatKoffe](https://github.com/ThatKoffe/niconico-twitch)'s respective StreamLabs and StreamElements plugins. If you're looking for something that supports StreamLabs or StreamElements, I highly recommend checking those out instead! This is primarily for users who don't want to use a third-party services for their chat.
 
 ## 🎮 Features
 
