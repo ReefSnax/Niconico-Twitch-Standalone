@@ -11,6 +11,9 @@ Inspired by [Tekigg](https://github.com/tekigg/niconico-twitch) and [ThatKoffe](
 - OBS/browser source friendly
 - Refresh token support
 - No server or backend required
+- Custom character limits
+- Twitch Global + Channel Emotes
+- BTTV/FFZ Emotes
 
 ## 🚀 How to Use
 
@@ -73,7 +76,6 @@ window.TWITCH_CONFIG = {
 ## 📝 Future Plans
 - Support for more emote platforms
 - User-styled text (custom colors + font effects)
-- Character limits
 - Hide commands
 - Hide users
 - Auto-profanity filter
