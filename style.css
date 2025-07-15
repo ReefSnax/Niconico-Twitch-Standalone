@@ -29,3 +29,9 @@ html, body {
   from { transform: translateX(100vw); }
   to { transform: translateX(-100%); }
 }
+
+.emote {
+  height: 1.5em;
+  vertical-align: middle;
+  image-rendering: auto;
+}
