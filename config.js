@@ -1,7 +1,9 @@
 window.TWITCH_CONFIG = {
-  clientId: "your_client_id_here",
-  clientSecret: "your_client_secret_here",
-  refreshToken: "your_refresh_token_here",
-  channel: "your_channel_name",
-  username: "your_twitch_username"
+  username: "yourTwitchUsername",
+  channel: "yourChannelName",
+  clientId: "yourTwitchClientID",
+  clientSecret: "yourTwitchClientSecret",
+  refreshToken: "yourRefreshToken",
+  fontSize: "24px",           // Set custom font size (e.g., "20px", "1.5em", "150%")
+  hideUsername: false,        // Hides usernames if true
 };

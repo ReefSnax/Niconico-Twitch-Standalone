@@ -58,11 +58,11 @@
       emotes[e.code] = `https://cdn.betterttv.net/emote/${e.id}/2x`;
     });
 
-    const ffz = await getJSON(`https://api.frankerfacez.com/v1/room/id/${userId}`);
+    const ffz = await getJSON(`https://api.frankerfacez.com/v1/room/${channel.toLowerCase()}`);
     if (ffz?.sets) {
       Object.values(ffz.sets).forEach(set => {
         set?.emoticons?.forEach(e => {
-          emotes[e.name] = e.urls['2'] ? `https:${e.urls['2']}` : '';
+          emotes[e.name] = e.urls['2'] ? (e.urls['2'].startsWith('http') ? e.urls['2'] : `https:${e.urls['2']}`) : '';
         });
       });
     }
@@ -126,6 +126,7 @@ function displayMessage(fullHTML) {
   const container = document.getElementById("chat-container");
   const el = document.createElement("div");
   el.className = "message";
+    el.style.fontSize = config.fontSize || '24px';
   el.innerHTML = fullHTML;
     el.style.top = `${Math.random() * 80}%`;
     container.appendChild(el);
