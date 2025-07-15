@@ -59,6 +59,7 @@ window.TWITCH_CONFIG = {
   username: "your_twitch_username",
   fontSize: "30px", // Edit to a value that works for you. For 1080p, 30px or higher is best!
   hideUsername: true // set to false if you want to show usernames
+  maxChars: 55,  // Maximum characters per message
 };
 ```
 
