@@ -49,8 +49,7 @@ You can use [TwitchTokenGenerator.com](https://twitchtokengenerator.com) to get 
    - `refresh_token` (store this in `config.js`)
    - Confirmation of which scopes are active
 
-### 📁 Config File (`config.js`)
-
+#### Step 3: Update your `config.js`
 Replace values with your own in `config.js`:
 
 ```js
