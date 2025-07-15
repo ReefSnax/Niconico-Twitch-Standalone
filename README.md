@@ -18,16 +18,33 @@ Inspired by [Tekigg](https://github.com/tekigg/niconico-twitch) and [ThatKoffe](
 2. Open `config.js` and fill in your Twitch info.
 3. Load `index.html` locally (as a `file:///` path) in OBS.
 
-### 🔐 Getting a Refresh Token
+### 🔐 Getting a `chat:read` Refresh Token (Recommended)
 
-You can use [TwitchTokenGenerator.com](https://twitchtokengenerator.com) to get a refresh token:
+You can use [TwitchTokenGenerator.com](https://twitchtokengenerator.com) to get a `chat:read` refresh token using **your own Twitch Developer credentials**:
 
-1. Visit the site and choose **“Custom Scope Token”**
-2. Enable the `chat:read` scope (and optionally `chat:edit`)
-3. After logging in, copy both:
-   - Your **Refresh Token**
-   - Your **Client ID**
-4. Create your own app in [Twitch Dev Console](https://dev.twitch.tv/console/apps) to get a **Client Secret**
+#### Step 1: Create a Twitch App
+1. Go to [Twitch Developer Console](https://dev.twitch.tv/console/apps)
+2. Click **“Register Your Application”**
+3. Set the **redirect URL** to:
+   ```
+   https://twitchtokengenerator.com
+   ```
+4. Set category to **Website Integration**
+5. Once created, copy:
+   - **Client ID**
+   - **Client Secret**
+
+#### Step 2: Generate a Token with Your Own Credentials
+1. Visit [TwitchTokenGenerator.com](https://twitchtokengenerator.com)
+2. Click **"Custom Scope Token"**
+3. Scroll down and click **"Use Custom Client ID/Secret"**
+4. Paste your **Client ID** and **Client Secret**
+5. Enable the scope `chat:read` (and optionally `chat:edit`)
+6. Click **“Generate Token!”**
+7. After logging in, you’ll be given:
+   - `access_token` (temporary, used for chat)
+   - `refresh_token` (store this in `config.js`)
+   - Confirmation of which scopes are active
 
 ### 📁 Config File (`config.js`)
 
