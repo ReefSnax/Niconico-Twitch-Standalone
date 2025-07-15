@@ -56,7 +56,9 @@ window.TWITCH_CONFIG = {
   clientSecret: "your_client_secret_here",
   refreshToken: "your_refresh_token_here",
   channel: "your_channel_name",
-  username: "your_twitch_username"
+  username: "your_twitch_username",
+  fontSize: "30px", // Edit to a value that works for you. For 1080p, 30px or higher is best!
+  hideUsername: false // set to true if you want to hide usernames, true NicoNico Douga style!
 };
 ```
 
@@ -67,20 +69,17 @@ window.TWITCH_CONFIG = {
 - Set dimensions (e.g., 1920x1080)
 - Enable **"Shutdown source when not visible"** and **"Refresh browser when scene becomes active"**
 
-## 🧪 Local Development
-
-Preview locally using:
-
-```bash
-npx serve
-# OR
-python -m http.server
-```
+## 📝 Future Plans
+- Support for more emote platforms
+- User-styled text (custom colors + font effects)
+- Character limits
+- Hide commands
+- Hide users
+- Auto-profanity filter
 
 ## 🛡️ Security Note
 
 Never share your refresh token or client secret publicly.
-Use a bot account instead of your main Twitch account when possible.
 
 ## 📜 License
 
