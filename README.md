@@ -4,6 +4,8 @@ A Twitch chat overlay styled like [NicoNico Douga](https://www.nicovideo.jp/) â€
 
 Inspired by [Tekigg](https://github.com/tekigg/niconico-twitch) and [ThatKoffe](https://github.com/ThatKoffe/niconico-twitch)'s respective StreamLabs and StreamElements plugins.
 
+Enjoy using it? Consider giving ReefSnax a follow on [BlueSky](https://bsky.app/profile/reefsnax.pikaparty.social) or [Twitch](https://www.twitch.tv/reefsnax).
+
 ## ðŸŽ® Features
 
 - Connects directly to Twitch IRC
